@@ -9,18 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var TextField: UITextField!
+    @IBAction func sayButton(_ sender: UIButton) {
+        if (TextField.text?.isEmpty)! {
+                    Label.text = "Hello Friend"
+        }else{
+            Label.text = "Hello \(String(describing: TextField.text!))"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello World)")
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
