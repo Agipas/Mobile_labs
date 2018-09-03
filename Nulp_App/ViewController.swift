@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBAction func sayButton(_ sender: UIButton) {
+        if (nameTextField.text?.isEmpty)! {
+                    helloLabel.text = "Hello Friend"
+        } else {
+            helloLabel.text = "Hello \(nameTextField.text!))"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello World:)")
