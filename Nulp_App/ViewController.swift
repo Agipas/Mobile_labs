@@ -9,13 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var Label: UILabel!
-    @IBOutlet weak var TextField: UITextField!
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBAction func sayButton(_ sender: UIButton) {
-        if (TextField.text?.isEmpty)! {
-                    Label.text = "Hello Friend"
-        }else{
-            Label.text = "Hello \(String(describing: TextField.text!))"
+        if (nameTextField.text?.isEmpty)! {
+                    helloLabel.text = "Hello Friend"
+        } else {
+            helloLabel.text = "Hello \(nameTextField.text!))"
         }
     }
     
