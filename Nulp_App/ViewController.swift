@@ -52,9 +52,13 @@ class ViewController: UIViewController {
     }
 
     func isPasswordSame(password: String, confirmPassword: String) {
-        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,20}$"
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        let result = passwordTest.evaluate(with: confirmPassword)
+        var result:Bool;
+        if password == confirmPassword {
+            result = true
+        }
+        else {
+            result = false
+        }
         changeColor(textFieldName: confirmPasswordTextField, isvalid: result)
     }
 
